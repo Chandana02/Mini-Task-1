@@ -1,0 +1,58 @@
+1.	Web dev is an art of designing web pages and web apps using certain mark up languages. 
+E.g.: HTML for basic background and other mark up languages like JavaScript and CSS for effects.
+2.	Browser: It is the client side of web dev which shows the website we asked for. E.g.: Google, Mozilla fire fox.
+
+
+3.	Working of browsers: It provides the environment for the users to request for something. When we type something (request) in the search box of a browser, the browser will search for the right client and show us various client servers which can satisfy our request.
+4.	Server: A network system will have 2 sides. One is server side. The other one is client side. It’s basically, the web browser we use. Servers deliver web pages.
+5.	Working of servers: server connects to the browser through internet connection. When the browser gets the request, server acts as a search engine for the request and gets the right domain and displays it on the screen.
+6.	Role of CPU in running browser engines: CPU comes in to play when an instruction is given in the browser to request the server for a web page. It deals with the instruction transferring between various components. The CPU deals with the controlling and memory allocated to the whole browsing action.
+7.	WWW: World Wide Web. Network of servers.
+8.	HTML: Hyper Text Mark up Language. Used to create web pages. It uses various attributes for various sections of a web page.
+9.	CSS: cascading style sheet. It’s a mark up language used for special effects in designing a web app or web page.
+
+10.	JavaScript: It is a scripting language which can add special effects or dynamic effects to the webpage.
+11.	Domain: The area of search.
+12.	Internet: it is a tool used to know anything and everything with the help of service providers, servers, clients.
+13.	Internet pack: It is a package that provides internet connection for a fixed period of time in exchange of money. It is provided by various ‘internet Service Providers’ like Airtel, Vodafone etc.
+14.	Web: Network of servers.
+15.	URL: The address we type in the search box of any browser.
+16.	URI: The identification of a file (what type it is).
+17.	What happens when you type into a browser’s address bar?
+When we type something into a browser’s address bar, the browser sends the address to the server and requests the server for the required information. 
+18.	Wi-Fi: The mechanism through which the various electronic devices can access the internet without wire connection.
+19.	Why most of the URL starts with http://? It is identification of a file of what type it is. It is not always HTTP. Sometimes, it varies with the file type or the type of browsing involved. Others include, ftp, TCP etc.
+20.	What’s https, ftp, SSL, TSL?
+These are the various starts of various addresses. It varies with the type of browsing required by a file.
+
+After researching,
+
+1.	Web dev: it is the development of web applications that run over browser or server. This can be done using mark up languages like HTML, CSS and scripting languages like JavaScript.
+2.	Browser: It is a software application used to locate or retrieve data and display it in the form of a web page. Majorly used browsers today are internet explorer, Mozilla, Google chrome. 
+3.	Browsers working: In the view of a client/server model, browser is the client run on the computer that contacts the web server and requests the information. The web server sends the information back to the browser which displays the results on the computer.
+4.	Server (web server): web servers are computers that deliver web pages. Every web server has an IP address and possibly a domain name. Any computer can be turned to a web server by installing the server software application.  
+5.	Servers working: when a browser requests for something, say, http://www.delta.com/index, the browser sends the request to the server whose domain name is delta.com and the server fetches the page ‘index’ and sends it to the browser. 
+6.	Role of CPU in running browser engines: CPU comes in to play when an instruction is given in the browser to request the server for a web page. It deals with the instruction transferring between various components. The CPU deals with the controlling and memory allocated to the whole browsing action.
+7.	Www: short form for “World Wide Web”. World Wide Web is a system of internet servers that provide specially formatted documents. The documents are formatted using HTML, CSS, and JavaScript that supports using links to other documents.
+8.	HTML: short form for “Hyper Text Mark up Language”. It’s the authoring language to create documents on the World Wide Web. It uses various tags and attributes to define structure and layout of a web document.
+9.	CSS: Short form for “Cascading Style Sheets”. It’s used for formatting a web page. Developed by W3C. It’s a new feature added to HTML that gives both web developers and web users more control over how pages are displayed. With CSS, designers can create style sheets that define how different elements like headers, links and background appear.
+10.	JavaScript: It’s a scripting language developed by Netscape. It enables web authors to spice up their sites with dynamic content since, it interacts with HTML. It is an open language that anyone can use without purchasing a license. 
+11.	Domain: Domain names are used to identify one or more IP addresses. For example, http://www.delta.com/index, delta.com is the domain name. It represents some 30 IP addresses. Domain names are used in URLs to identify a web page. Every domain name has a suffix that indicates a top level domain. (there are a fixed number of top level domains)
+12.	Internet: Internet is a global network that connects different computers all over the world. It provides online services through ‘internet Service Providers (IPS).
+13.	Internet pack: It is a package that provides internet connection for a fixed period of time in exchange of money. It is provided by various ‘internet Service Providers’ like Airtel, Vodafone etc.
+14.	Web: Web is basically a network of threads in it. A user can access any thread through internet.
+15.	URL: Uniform Resource Locator. It is the global address of documents and other resources on World Wide Web. The first part of URL is protocol identifier and indicates what protocol to use and the second part is the resource name or domain name which gives the IP address where the resource is located. For example, http://www.delta.com/index, ‘http’ is the protocol identifier and it is followed by the domain name. The two are separated by a colon followed by //. The term web address can be used as a synonym for URL.
+16.	URI: Uniform Resource Identifier. It is a generic name for all types of names and addresses that refers to objects on World Wide Web. URL is a type of URI.
+17.	What happens when you type into a browser’s address bar? 
+When we type a URL in the address box, for example, http://delta.com, through an internet connection, the browser initiates the connection to the web server that is storing the delta files by converting the domain name into its IP address and then locating the server that is storing the information for that IP address. when a browser requests for something, say, http://www.delta.com/index, the browser sends the request to the server whose domain name is delta.com and the server fetches the page ‘index’ and sends it to the browser. This involves the whole process of converting into IP address and searching for the server.                                                                                                             
+18.	Wi-Fi: Wireless Fidelity. The mechanism through which the various electronic devices can access the internet without wire connection. 
+19.	Why most of the URL starts with http://?
+Hyper Text Transfer Protocol. It is the protocol identifier. HTTP is underlying protocol. Used by the World Wide Web. HTTP defines how messages are formatted and transmitted and what actions servers and browsers should take in response. 
+20.	What is https, ftp, SSL, TSL?
+When we search for anything in the web, it is not like some person brings the page and shows it before us. All videos and images are sent in the form of signals. To convert the info into signal, various protocols (rules or instructions) are followed. Eg: SMTP, HTTP and FTP. The URL may start with any of these depending on the purpose and the info we are working on.
+FTP- File Transfer Protocol
+SSL- Secure Sockets Layer. It is a protocol followed for transmitting private and confidential information, when a web browser tries to connect to a website using SSL, the browser will first request the server identify itself. This prompts the web server to send the browser a copy of the SSL certificate. The browser checks to see if the SSL certificate is trusted. If the SSL certificate is trusted, then the browser sends a message to the web server. Then the server responds to browser with a digitally signed acknowledgement to start an SSL encrypted session. This allows encrypted data to be shared between the browser and server. We can then notice that our browsing session then starts with https and not http.
+TLS- Transport Layer Security. This is also a cryptographic protocol designed to provide communications security over a computer network.
+HTTPS is simply a Hyper Text Transfer Protocol layered on top of SSL and TSL protocol. 
+
+
