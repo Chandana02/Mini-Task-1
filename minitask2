@@ -1,0 +1,18 @@
+1.	Task: clicking on one 100*100 square should increase the size of another 100*100 by 10px for each click till it reaches 200*200 and should start decreasing by 10px for each click till it reaches 100*100 and vice-versa.
+I had a problem with increasing the size of the div. I didn’t give a variable name to the height and width that are to be varied and tried to increase the size of the div, which obviously will not happen. My mentor helped me there. The rest was pretty much easy. I was able to figure out the way to get the div back to its original size by applying a few conditions.
+I wasn’t able to finish the task though. The div’s size has to be increased in all directions. I failed to do so. However, I learnt it from other member of my group.
+2.	Concepts learnt:
+Usage of Ids
+Functions
+Basics of JS
+Basics of CSS
+Event listeners
+Difference between Ids and classes
+Random functions
+3.	Experience with
+Mentor:
+He has been very helpful at times when needed. He clarifies every single and silly doubt without hesitation. IRC sessions, he conducts, are very informative, at the same time, a lot of fun. He is patient enough to clarify everyone’s doubt. He teaches amazingly well. He suggested various links to learn which are very useful. In a nutshell, he is a very nice mentor.
+Review:
+I was asked about 4 questions. I wasn’t able to answer 1 or 2 of them as I just started to learn and was pretty much confused as to what i was doing. Anyway, review had also been an opportunity to learn.
+Advance task:
+I was able to finish it in less than one day. I know, I didn’t exactly finish it. But, it was fun exploring to properly finish the task. I have learnt a lot of things while I was doing the tasks. It is the tasks that are motivating me to learn more. 
