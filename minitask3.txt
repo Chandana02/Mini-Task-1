@@ -1,0 +1,62 @@
+1.Browser console is just like a web console. The difference is:
+The web console logs any information associated with a webpage: any network requests, Java script, CSS and security errors and warnings, as well as, error, warning and informational messages explicitly logged by java script code running in the PAGE context. It also enables us to interact with a web page by executing java script expressions in the context of the page.
+The browser works similar but, it logs the information associated with the whole browser rather than a single content tab. It logs the same sort of information as the webconsole that is mentioned above. However, rather than logging this information for a single content tab, it logs the information for all the content tabs, add-ons, and for the browser’s own code.
+Browser console can be accessed by pressing “ctrl+shift+j”.
+Why?
+A console is basically a developer tool that aids us in doing a lot of things associated with a browser. But, it’s wide use is debugging. If there is any error with code we write for a webpage to work and it doesn’t work due to some logical or syntax errors, the errors can be viewed in the console tab. It works like a compiler for some programming language.
+ 
+2. var images=$$(‘img’);
+    for (i in images) {
+    images[i].src=https://goo.gl/P0Xgv7”;
+    }
+$$(selector) is the command which returns an array of elements that match the specified selector. This is a shortcut for “document.querySelectorAll();”
+
+3. The kbd element or <kbd> Tag is used to identify the keystrokes that the user needs to make on his or her keyboard. Most browsers will render the content between opening and closing kbd tags in monospace font by default, but it’s possible to style its display using CSS. Most browsers render it in a fixed width font.                      E.g.:<p> Hold <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>delete</kbd> and click on task manager</p>
+The marqee element provides a way for the browser to render the text that moves across the page. E.g.:<p><marquee>It is moving</marquee></p>
+The blink element causes the between the opening and closing tags to alternate between visible and invisible (blink).							 		E.g.:<p><blink>Special offers</blink> here!</p>
+Syntax for an event to occur in java script when there is an error is as follows:					object.onerror=function () { script; }                This means onerror event is triggered when there is an error in loading an external file (E.g. document or an image).
+
+4. Advantages of class over id:
+	ID can be used to identify only one element, whereas, class can be used to identify more than one element. But, for java script, IDs are needed to select one and only one element. If a function has to be applied to one and one element, the element can be defined by ID.
+Occasionally, classes can also be used in cases where, a function needs to be applied to all the elements having a particular class. It is also important to look at the performance of Ids when combined with other selectors to get a more complete picture. Their advantage mostly falls away in those scenarios.
+Elements defined by ID in java script can be easily accessed especially in the cases where we say “document.getElementById(‘Id’)”, whereas, an element defined by a class can’t be accessed like this.
+Usage of class helps in the reusability of the code i.e., all the elements which have to be performed same functions on can be defined under a class.
+
+5. Java script has both strict and type-converting comparisons. A strict comparison (E.g. ===) is only true if the operands are of the same type. The more commonly used abstract comparison (E.g. ==) converts the operands to the same type. For 2 strings to be the same, they should have the same set of characters in the same order. 2 numbers are equal, if they are numerically equal. If the 2 operands are not of the same type, they are converted to the same type like in the following example:
+a) alert(‘’==’0’)// This returns false as both the operands are of the same type ‘string’ and it checks if the 2 strings are equal character by character and it sees that null string is not equal to string ‘0’.
+b) alert (0==’’)// This returns true because, when the null string is converted to an integer, it becomes 0 and then LHS=RHS.
+c) alert (0==’0’)// This returns true because, the string ‘0’ is converted to integer 0 and hence, LHS=RHS.
+
+6. The return statement causes the execution to leave the current subroutine and resume at the point in the code immediately after where the subroutine is called, known as its address. Return statements in many languages allow a function to specify a return value to be passed back to the code that called the function.
+In C/C++, return exp; is a statement that tells a function to return the execution of the program to the calling function. If a function has a return type void, the return statement can be used without a value, in which case the program just breaks out of the current function and returns to the calling function.
+Java script “return value;” statement specifies the value to be returned to the function caller. If omitted, it returns undefined.
+
+7. Functional programming is when functions, not objects or procedures, are used as the fundamental building blocks of a program. Unlike this, imperative programming is composed of statements which change the global state of an object. Functional programming typically avoids using mutable data. Every function is considered as an expression or returns a value i.e. an expression or function can be replaced by its value. Since a function is nothing but an expression or an object or a value, functions can be passed as arguments to other functions.
+ Functional programming comes in handy because of the features like, reusability, simplicity of testing and debugging, and overall simplicity. Reusability is where we can use the functions again and again without state changes. Testing and debugging is easier because we can narrow down to a particular function and check if it is working using print statements. Also, the whole program looks much more cleaner and understandable in functional programming.  
+
+8. var x =5;   
+{  var x = 10; }
+alert(x);
+In java script, a variable declared globally undergoes respective changes when subjected to any irrespective of whether the change is applied inside a block or outside. Hence, in the above case, the value 5 of x is overwritten by 10.
+Unlike this, in C/C++, when the execution enters the block, a new variable x is created and value 10 is stored in it. Any changes that may happen inside this block will only change the value of newly created x which is only local to the block and not the global x.
+
+9. A cache is a repository for stored data that is used to expedite the process of retrieving data. There are several types of caches, including webpage caches, hardware caches, software caches and memory caches. Caches are used to speed up a process so that data does not have to be recomputed or fetched from its original location and therefore, saves time. The greater the requests the requests that can be served from cache, the quicker system performance becomes. A cache hit is when a program checks the cache for previously stored information and finds it. A cache miss is when the data is not found within the cache and the program must look to a larger, slower memory source.
+Internet browsers use caching to store HTML web pages by storing a copy of visited pages and then using that copy to render when you re-visit the page. If the date of the page is same as the date of the previously stored copy, then the computer uses the one on the hard drive rather than re-downloading it from the internet.
+Caching is the primary reason for a webpage to load faster if it was previously opened.
+
+10. http://jsfiddle.net/chandy_02/qcw51ekt/2/ 
+                                                                                                                                                                                                                                   
+11.  JavaScript uses prototypal inheritance and not classical inheritance.
+Prototype= An original object or form which forms basis for other objects, forms or its models and generalisations.
+The prototypal inheritance works in the following way:
+e.g.  var animal=object.create(null); //the function will create an object which does not have a prototype.
+	var dog=object.create(animal); // animal is the prototype of dog. Dog will inherit the properties of animal.
+	dog.numoflegs=4;
+	dog.speak = function() { return “woof woof!”; }
+	var spot=object.create(dog);
+	spot.color=’black’;
+	spot.pattern=’spots’; // now the spot object will have properties inherited from dog like numoflegs and the method speak() and also the properties that are defined only for spot like color and pattern.
+	var dash=object.create(spot);
+	dash.color=brown;//though dash is inherited from spot, we can still change certain properties that are associated with both spot and dash. Like in this example, we changed the color. The pattern still remains the same for dash that is, spots.
+If we add more properties to spot, all those properties will be inherited by dash also.
+Other object-oriented programming language like C++ uses classical inheritance of classes. Classes are used to define objects. 
