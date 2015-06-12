@@ -1,0 +1,26 @@
+1.	Internet server or a web server is a special computer which is constantly switched on and connected to the internet so that each internet user around the world can access a website all the times.
+Depending on the expected load and type of services, which this computer will provide, different configurations can be set up. To ensure better internet connectivity, the particular server is stored in a data center and connecting it to the internet does not automatically make it a server. For this purpose, specific web server software has to be installed on it and configured according to the given platform. Hence, any computer can be turned into a server by installing server software and connecting to the internet. 
+
+2.	Local host:
+Put plainly, it is the hostname used to describe the local computer address. Translated to an IP address, local host is always designated as 127.0.0.1. Host name is the term for the label that is assigned to any device connected to a computer network and is used to identify the device across the web. Local host not only makes connecting to local servers extremely efficient, but also makes it easier to access via the web. System administrators and application developers commonly use local host to test applications.
+Put in much simpler words, local host is the server installed on a computer.
+
+3.	The IP address 127.0.0.1 is a special address reserved for use on each computer. 127.0.0.1 is conventionally a computer’s loopback address. Messages sent to loopback IP addresses like 127.0.0.1 do not reach outside to the Local Area Network (LAN), but instead are automatically re-routed by the computer’s own network adapter back to the receiving end of the TCP/IP stack. All of the addresses from 127.0.0.1 up to 127.255.255.254 are reserved for loopback, but 127.0.0.1 is by convention the loopback address.
+
+4.	All the loopbacks are not the same. Sometimes, we have multiple services and they have to use loopback listening on the same port. We need to assign separate loopback addresses if we want to deal with them individually. That is, this might be helpful when we have a large number of servers running locally on the same port for some reason. 
+
+5.	XAMPP is free and open-source cross-platform(X) web server solution stack. It comes with Apache server (A), MySQL database(M), PHP (P) and Perl programming (P) languages.
+The best feature of XAMPP ease of installation. With XAMPP we don’t need to install each of the individual servers of web server individually and hence the installation is easier and quicker. No need to worry about the PHP configuration or MYSQL setup etc. 
+After installation, we go to the folder and run xampp-control.exe; this will open up a control panel. Click start button in front of each of the components to run them. Once you click them to run Apache we can type localhost or 127.0.0.1 in our web browser of choice and we will get XAMPP home page. We can put your applications in htdocs folder inside XAMPP folder and they will be served in our browser.
+Phpmyadmin:
+phpMyAdmin is a software tool written in PHP, intended to handle the administration of MySQL over the Web. phpMyAdmin supports a wide range of operations on MySQL. If the server installed is XAMPP, phpmyadmin comes along with the other files. 
+
+6.	All the PHP is executed on the server before it is sent to our browser. All our browser receives is the results of PHP. For this same reason, we can’t go to a .php file on the web, save it and expect to see how it works. We are only saving the page produced by the PHP and not the PHP itself. 
+E.g.  < ? php Echo “hey”; ?>
+We can see that the PHP code is echoing the line “hey”, however, it is the server that reads this code and then knows to send “hey” to the browser. Sibnce the rest of the code is just instructions for the server, it doesn’t send anything else. So a view source will only show “hey”, that was sent to our browser by server when it read our file.
+
+7.	hotdocs: Under XAMPP root directory there is a folder called hotdocs. That’s where we put our website related stuff. For each website you create, it’s better to create a folder inside hotdocs folder and then put content inside that to avoid conflicts.  E.g. if we create a php file inside hotdocs say “welcome.php”, then we can access it via the URL  http://localhost/welcome.php 
+
+8.	Client- server mechanism:
+As a client/server model, browser is the client run on a computer that contacts the web server and requests for information. The server sends back the information to the browser which displays the results on the computer that supports a browser.
+Mechanism: when the user types a URL in the address bar of a browser, through an internet connection. The browser initiates a connection to the server that is storing the requested files by first converting the domain name into an IP address by using Domain Name Service and then locating the server that is storing information for that IP address. Once the contact is made, using HTTP, servers deliver the data back to the browser. The browser, in turn, converts or formats the files into what we can see the displayed content on the browser. In the same way, the server can send files to multiple clients to view the same page simultaneously. 
