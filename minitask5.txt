@@ -1,0 +1,46 @@
+1. http://jsfiddle.net/xsxehu9m/2/
+   The above is a web application.
+ 
+2.a) There came a list of 'chrome-urls' when I opened, 'chrome://chrome-urls/'
+     There is this url 'chrome://version', which when opened, displayed various information which included javascript version.
+     Javascript version version that my browser supports is "V8 4.3.61.27".
+  b) When I typed my name in 'chrome://omnibox', it displayed a table with the coulmns- 'provider', 'type', 'relevance', 'content', 'URL'.
+     Firstly observed, the results are arranged in the decreasing order of relevance.
+     I tried typing various other words in the omnibox. I made the following observations:
+     The contents corresponding to 'HistoryURL' provider has the highest relevance. Then came the contents corresponding to 'HistoryQuick',
+     followed by, 'Search' provider- 'search-what-you-typed' type contents which is then followed by 'search-suggest' type contents.
+     The URL column lists the URLs corresponding to the contents.
+     Similarly, I have tried giving input like "12*3". It shows a result of type 'search-calculator-answer' type which is of much lesser relevance.
+     This way, omnibox gives all possible results.
+  
+3. C code to print the first maximum occuring character:
+   
+#include <stdio.h>
+#include <string.h>
+ 
+int main()
+{
+   char string[100];
+   int i, l=0, c = 0,location=0, maximum, count[26] = {0};
+ 
+   printf("Enter a string\n");
+   gets(string);
+   maximum = count[0];
+   while (string[c] != '\0')
+   {
+      /*considering that string only has characters between 'a' & 'z'*/
+        if (string[c] >= 'a' && string[c] <= 'z') 
+        l = count[string[c]-'a']++;
+			if (l> maximum)
+   	    	{
+       			maximum  = l;
+       			location = c;
+    		}
+ 
+        c++;
+   }
+
+   printf("%c", string[location]);
+   return 0;
+}
+  
