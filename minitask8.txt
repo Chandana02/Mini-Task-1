@@ -1,0 +1,173 @@
+1. Dynamic programming:
+The idea of dynamic programming is simple. Dividing the problem into sub-problems, solve a sub-problem, save the result for future use, so as to, avoid solving the same problem again. 
+Here is a simple example to find ‘n th’ Fibonacci number.
+(using recursion)
+
+#include<stdio.h>
+int fib(int n)
+{
+   if (n <= 1)
+      return n;
+   return fib(n-1) + fib(n-2);
+}
+ 
+int main ()
+{
+  int n = 9;
+  printf("%d", fib(n));
+  getchar();
+  return 0;
+}
+
+We can observe that this implementation does a lot of repeated work(the recursion).
+                         fib(5)   
+                     /             \     
+               fib(4)                fib(3)   
+             /      \                /     \
+         fib(3)      fib(2)         fib(2)    fib(1)
+        /     \        /    \       /    \  
+  fib(2)   fib(1)  fib(1) fib(0) fib(1) fib(0)
+  /    \
+fib(1) fib(0)
+
+Using dynamic programming,
+
+#include<stdio.h>
+ 
+int fib(int n)
+{
+  /* Declare an array to store Fibonacci numbers. */
+  int f[n+1];
+  int i;
+ 
+  /* 0th and 1st number of the series are 0 and 1*/
+  f[0] = 0;
+  f[1] = 1;
+ 
+  for (i = 2; i <= n; i++)
+  {
+      /* Add the previous 2 numbers in the series
+         and store it */
+      f[i] = f[i-1] + f[i-2];
+  }
+ 
+  return f[n];
+}
+ 
+int main ()
+{
+  int n = 9;
+  printf("%d", fib(n));
+  getchar();
+  return 0;
+}
+We can avoid the repeated work done is the method 1 by storing the Fibonacci numbers calculated so far.
+
+2. Time complexity:
+    The total of steps involved in solving a solution to solve a problem is the function of the size of the problem, which is the measure of that problem’s time complexity. 
+    The number of (machine) instructions which a program executes during its running time is called its time complexity in computer science. This number depends primarily on the size of the program's input. 
+    It can be a function describing the amount of time an algorithm takes in terms of the amount of input to the algorithm or the number of memory accesses performed, 
+    the number of comparisons between integers, the number of times some inner loop is executed, or some other natural unit related to the amount of real time the algorithm will take.
+Space complexity:
+Amount of computer memory required during the program execution, as a function of input size. A good algorithm keeps this amount as less as possible. 
+For example, in finding the ‘n th’ Fibonacci number, if we have used a O(logn)  algorithm and store the Fibonacci numbers generated in an array till n th term and then retrieve the ‘n th’ array element, it would consume memory cells(space). 
+Instead, if we just run the loop without storing the numbers generated in an array for n times and print the last generated number, it would consume a lot lesser space(Examples in the 1st answer).
+
+3. Taking the example of a binary search,
+For example, with each step of a binary search, you rule out an entire half of the space you're searching, without having to examine what's in it.
+In the case of binary search, we are trying to find the maximum number of iterations, and therefore the maximum number of times the search space can be split in half. This is accomplished by dividing the size of the search space, n, by 2 repeatedly until you get to 1.
+(We are trying to narrow down the exact place the element would be if it existed in the search space. Since we can only check one space at a time, we can only make our final conclusion about whether or not it's in the search space if we can get that precise location.
+That's why we're trying to reduce the search space to 1. After we do that, we'll check that 1 spot to see if it contains the element.)
+
+n/2^x=1, we have to find the value of ‘x’
+
+To reiterate: x is the number of times you can split a space of size n in half before it is narrowed down to size 1.
+
+2^x=n
+
+Taking log on both sides
+
+log(2^x)=log(n)
+
+x*log(2)=log(n)
+
+x=log(n)/log(2)=log(n) to the base 2
+
+So from this, we've determined that the maximum number of steps you need to search a space of n elements is log2(n).
+Since log2 (n) only differs from log10 (n) by a constant factor, this means that the binary search is in O(log(n)). Therefore, binary search works in O(log(n)) time.
+                    
+4. Searching algorithm in my PC:
+    The OS on my laptop is windows 8.1. By default, a window 8.1 displays the results in a prioritised manner. First, it displays the apps that it finds, then the windows settings that correspond to the search term(s) we entered and then the files it finds.
+    Depending on the search terms we used, we may see only some apps and Windows settings being displayed and no files due to lack of space provided for the search results. 
+    Below the initial set of results, we can see a line below which are there a couple of suggestions related to the key terms and these suggestions are provided by Bing based on their available user data and our own search history.
+    
+    Windows 8.1 uses a new search algorithm called smart search which uses natural language understanding. When performing a search on our devices or on the internet, we use keywords to find what we are interested in.
+    ‘Natural language understanding’ is the process of separating important keywords from a natural context and using them to return appropriate search results.
+
+5. Key difference:
+x86 is a family of instruction set architectures that are based on the original Intel 8086 CPU. The x64 is an instruction set architecture that belongs to the x86 family that supports 64 bits per address.
+
+x86 was originally introduced as a 16-bit extension of Intel’s 8-bit 8080 processor. The family offers a variety of different processor sizes including 16-bit, 32-bit and 64-bit, with additional sizes under development. 
+The term x86 is derived from the fact that early successors to the 8086 also ended in the numbers 86. All the extensions to the x86 families are fully backward compatible, in other words compatible with the older versions.
+**The term is more commonly used to refer to the x86_32 or the 32-bit set because the term became popular after the release of this version. In technical terms, the 32-bit has been shortened to x32 to differentiate it from the 64-bit (x64)**. 
+
+The x64 is an instruction set architecture that belongs to the x86 family. It supports large amounts of virtual memory and physical memory than its predecessors. 
+It was originally launched for servers that required capacity to handle greater loads and memory requirements, but now is compatible in almost all PCs. x64 is backward compatible and can work with 32-bit programs, however it is unable to work with 16-bit programs.
+Hence, another difference can be x86 is compatible for 32-bit processor and x64 is compatible for 64-bit processor.
+
+6. 
+#include <stdio.h>
+ 
+void multiply(int F[2][2], int M[2][2]);
+ 
+void power(int F[2][2], int n);
+ 
+/* function that returns nth Fibonacci number */
+int fib(int n)
+{
+  int F[2][2] = {{1,1},{1,0}};
+  if (n == 0)
+    return 0;
+  power(F, n-1);
+  return F[0][0];
+}
+ 
+/* Optimized version of power() in method 4 */
+void power(int F[2][2], int n)
+{
+  if( n == 0 || n == 1)
+      return;
+  int M[2][2] = {{1,1},{1,0}};
+ 
+  power(F, n/2);
+  multiply(F, F);
+ 
+  if (n%2 != 0)
+     multiply(F, M);
+}
+ 
+void multiply(int F[2][2], int M[2][2])
+{
+  int x =  F[0][0]*M[0][0] + F[0][1]*M[1][0];
+  int y =  F[0][0]*M[0][1] + F[0][1]*M[1][1];
+  int z =  F[1][0]*M[0][0] + F[1][1]*M[1][0];
+  int w =  F[1][0]*M[0][1] + F[1][1]*M[1][1];
+ 
+  F[0][0] = x;
+  F[0][1] = y;
+  F[1][0] = z;
+  F[1][1] = w;
+}
+ 
+/* Driver program to test above function */
+int main()
+{
+  int n = 4;
+  printf("%d", fib(4));
+  getchar();
+  return 0;
+}
+
+I am quite new to time and space complexities, I mean, the concepts. 
+I know to write the program whose time complexity is O(n). 
+I found the above code in ‘geeks for geeks’. I understood the code though.
