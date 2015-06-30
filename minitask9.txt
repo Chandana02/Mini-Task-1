@@ -1,0 +1,179 @@
+1. SSH:
+   Secure Shell (SSH) is a network protocol that allows data to be exchanged over a secure channel between two computers. 
+   Encryption provides confidentiality and integrity of data. This allows a user to run commands on a machine's command prompt without 
+   them being physically present near the machine. It also allows a user to establish a secure channel over an insecure network in 
+   a client-server architecture, connecting an SSH client application with an SSH server.
+
+   I downloaded openSSH for windows.
+   cd into the openSSH directory on my laptop.
+   Ran the command : "ssh -p 22 kabi2104@play4changes.com".
+   It connected to the server "play4changes.com" and permanently added 'play4changes.com,192.186.192.37' to the list of known hosts.
+   
+   Showed a screenshot.
+
+2. chmod:
+   It is the short form for 'change mode'. chmod is a command for changing permissions on files and directories.
+   It is used only in servers with a Unix-like operating system, such as Linux. 
+   Unix systems come with a file control mechanism to determine who can access a particular file or
+   folder and what actions they can do to it. There are two parts to the file control mechanism, namely Classes and Permissions.
+   Classes determines who can access the file while the Permissions determines the kind of action the user can do to the file.
+   There are three Classes – Owner, Group, Others(general public).
+   
+   for example, take the command:
+   chmod 766 readme.txt
+   
+   the first digit corresponds to the owner of the file
+   the second digit corresponds to the file's group
+   the final digit corresponds to everybody else.
+   
+   There are eight digits that can be used in the mode parameter.
+   0 - Deny all
+   1 - Execute Only
+   2 - Write Only
+   3 - Execute + Write
+   4 - Read Only
+   5 - Read + Execute
+   6 - Read + Write
+   7 - Read + Write + Execute
+   Hence, in the above example, the user has permissions to read, write and execute. File's group and general public have permissions 
+   to read and write only.
+   
+   403 request:
+   It's also known as 'Forbidden error'. A web server may return a 403 Forbidden HTTP status code in response to a request from a client 
+   for a web page. The 403 Forbidden error is an HTTP status code that means that accessing the page or resource you were trying to 
+   reach is absolutely forbidden for some reason.
+
+   The reasons may be the following:
+   403.1 - Execute access forbidden.
+   403.2 - Read access forbidden.
+   403.3 - Write access forbidden.
+   403.4 - SSL required.
+   403.5 - SSL 128 required.
+   403.6 - IP address rejected.
+   403.7 - Client certificate required.
+   403.8 - Site access denied.
+   403.9 - Forbidden: Too many clients are trying to connect to the web server.
+   403.10 - Forbidden: web server is configured to deny Execute access.
+   403.11 - Forbidden: Password has been changed.
+   403.12 - Mapper denied access.
+   403.13 - Client certificate revoked.
+   403.14 - Directory listing denied.
+   403.15 - Forbidden: Client access licenses have exceeded limits on the web server.
+   403.16 - Client certificate is untrusted or invalid.
+   403.17 - Client certificate has expired or is not yet valid.
+   403.18 - Cannot execute requested URL in the current application pool.
+   403.19 - Cannot execute CGI applications for the client in this application pool.
+   403.20 - Forbidden: Passport logon failed.
+   403.21 - Forbidden: Source access denied.
+   403.22 - Forbidden: Infinite depth is denied.
+   403.502 - Forbidden: Too many requests from the same client IP; Dynamic IP Restriction limit reached.
+   
+   500 error:
+   Most of the times, this error is displayed in the following way:
+   "The server encountered an unexpected condition that prevented it from fulfilling the request by the client".
+   Put simply, the 500 error is a "server-side" error.
+   That means that there is something wrong with the server who is hosting the website. It is an extremely general error usually 
+   caused by configuration issues with the websites programming, PHP or system permissions.
+   
+   302 response code:
+   A status code of 302 tells a client that the resource they asked for has temporarily moved to a new location. The response should 
+   also include this location. It tells the client that it should carry on using the same URL to access this resource.
+   
+   Any client or the browser goes through the following cycle when it communicates with the Web server:
+   1)Obtain an IP address from the URL name of the site. This conversion of IP name to IP address is provided by domain name servers (DNSs).
+   2)Open an IP socket connection to that IP address.
+   3)Write an HTTP data stream through that socket.
+   4)Receive an HTTP data stream back from the Web server in response. This data stream contains status codes whose values are determined 
+   by the HTTP protocol. Parse this data stream for status codes and other useful information.
+   This error occurs in the final step above when the client receives an HTTP status code that it recognises as '302'.
+   
+   200 response code:
+   The 200 status code is by far the most common returned. It means, simply, that the request was received and understood and is being processed.
+   It's a standard respnse for successful HTTP requests. The information returned with the response is dependent on the method used in the request.
+   In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request, the response will 
+   contain an entity describing or containing the result of the action.
+
+3. O/P of alert_a():
+   Hello World
+   
+   O/P of alert_b():
+   World
+
+4. Ports:
+   HTTP: 80
+   HTPPS: 443
+   SSH: 22
+
+5. a)How to remove(uninstall) windows:
+   I have just one Windows operating system installed, which makes the uninstallation all the more simple. I just have to take the 
+   installation disc of the operating system I want to use next, boot from it and, during the installation procedure, select the existing 
+   Windows partition and format it or delete it. Then, reuse that partition (or available empty space) and install the new operating system.
+
+   b)How to install Linux using USB or liveCDs:
+   All you need is a a flash drive free utility called UNetbootin. You can run the app from the Windows, or as a matter of fact, any OS.
+   Important thing to keep in mind is that, many linux-based operating systems allow us to run the OS from a live CD or USB flash drive.
+   'UNetbootin' makes it possible to convert most Linux distros that offer LiveCD enviroments into a LiveUSB that offers the same feature.
+   (Unetbootin allows us to create bootable Live USB drives for Ubuntu, Fedora, and other Linux distributions without burning a CD. 
+   It runs on Windows, Linux, and Mac OS X. We can either let UNetbootin download one of the many distributions supported for us, or 
+   supply our own Linux '.iso' file if we've already downloaded one or when our preferred distribution isn't on the list.)
+   
+   All we need to do is the following:
+   Download UNetbootin to your computer.
+   
+   We can then download many Linux-based operating systems directly from the UNetbootin interface, including Ubuntu, Debian, Fedora, Mandriva,
+   openSUSE, or Linux Mint. We can also download an ISO file for any of these operating systems and use the tool to copy the files to our USB.
+   
+   There's nothing to install. We just have to run the application.
+   
+   We just have to browse to find the disc image file downloaded and click the OK button. Before that, we have to make sure that the drive type
+   is 'USB drive' and the appropriate drive is chosen, which in our case is the USB or the CD.
+   
+   Once we click on OK, the Unetbootin will prepare our disc. The app will first download files, then extract them and copy them to 
+   our flash drive, prepare the bootloarder, and then let us know when the process is finished. It will then give us an option to reboot then
+   or exit the app.
+   
+   We can now close the app and remove the flash drive.
+   
+   We then have to plug the USB to the PC in which we want to use linux on and power on the computer before which we have to make sure 
+   that the computer can boot from a USB flash drive.
+   
+   We will then be given options of Boot devices from which we can choose 'Removable device'(USB). It will the boot it with the linux with 
+   the distribution we chose. :)
+
+   c)How to disable secure boot and install linux:
+   By default, the machine’s UEFI firmware will only boot boot loaders signed by a key embedded in the UEFI firmware. This feature is
+   known as "Secure Boot" or "Trusted Boot". With secure boot,  the computer will only boot trusted software, so malicious boot loaders
+   won’t be able to infect the system.
+   We can control Secure Boot from our UEFI Firmware Settings screen. To access this screen, we'll need to access the boot options
+   menu in Windows 8. To do this, we need to open the Settings charm — click the Power button, then press and hold the Shift key as
+   we click Restart. Our computer will restart into the advanced boot options screen. Then, we have to do the following:
+   Select the Troubleshoot option,
+   select Advanced options,
+   and then select UEFI Settings.
+   We'll be taken to the UEFI Settings screen, where you can choose to disable Secure Boot.
+   Thus, disabling secure boot will give our PC, the ability to boot anything, which in our case, is linux.
+
+   d)How to migrate from windows to Linux:
+   We have many options to do so. We can either dual boot our computer or, we can also do this:
+   Download Ubuntu, create a bootable CD/DVD or a bootable USB flash drive. Boot form whichever one we create, and once we get to
+   the installation type screen, we choose replace Windows with Ubuntu.
+   (We can do either do a) or b)).
+
+6. Proxy:
+   In computer networks, a proxy server is a server that acts as an intermediary for requests from clients seeking resources from other 
+   servers. A client connects to the proxy server, requesting some service, such as a file, connection, web page, or other resource 
+   available from a different server and the proxy server evaluates the request as a way to simplify and control its complexity.
+   For example, let's look into how wi-fi works.
+   Our wifi is a network. Certain devices are connected to that network. But the internet is the "outside" world. And the router/modem is
+   the link between this outside world and the inside world. When we type google com in our browser, the browser makes an HTTP request
+   to the router, which acts as a proxy between google and you.So, it forwards all the requests it gets from our pc, to google.com,
+   google.com replies back to the router, and the router then replies to us.
+   
+   Reverse proxy:
+   A reverse proxy (or surrogate) is a proxy server that appears to clients to be an ordinary(original) server. Requests are forwarded 
+   to one or more proxy servers which handle the request. The response from the proxy server is returned as if it came directly from the
+   proxy server, leaving the client no knowledge of the origin servers. Reverse proxies are installed in the neighbourhood of one or
+   more web servers. All traffic coming from the Internet and with a destination of one of the neighborhood's web servers goes through 
+   the proxy server. While a forward proxy acts as an intermediary for its associated clients to contact any server, a reverse proxy 
+   acts as an intermediary for its associated servers to be contacted by any client.
+
