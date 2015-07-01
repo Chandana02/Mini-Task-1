@@ -1,0 +1,127 @@
+1.
+<html>
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+<body>
+<img src = "images/space1.jpg" style = "height:300px;width:300px;" />
+<img src = "images/space2.jpg" style = "height:300px;width:300px;" />
+<img src = "images/space3.jpg" style = "height:300px;width:300px;" />
+<img src = "images/space4.jpg" style = "height:300px;width:300px;" />
+<img src = "images/space5.jpg" style = "height:300px;width:300px;" />
+<img src = "images/space6.jpg" style = "height:300px;width:300px;" />
+<img src = "images/space7.jpg" style = "height:300px;width:300px;" />
+<img src = "images/space8.jpg" style = "height:300px;width:300px;" />
+<img src = "images/space9.jpg" style = "height:300px;width:300px;" />
+<img src = "images/space10.jpg" style = "height:300px;width:300px;" />
+<img src = "images/space11.jpeg" style = "height:300px;width:300px;" />
+<img src = "images/space12.jpg" style = "height:300px;width:300px;" />
+<img src = "images/space13.jpg" style = "height:300px;width:300px;" />
+<img src = "images/space14.jpeg" style = "height:300px;width:300px;" />
+<img src = "images/space15.jpeg" style = "height:300px;width:300px;" /><br><br>
+<a href = "cache.html">Without cache </a>
+</body>
+</html>
+
+------
+The directive CACHE-CONTROL:NO-CACHE indicates cached information should not be used and instead requests should be forwarded to the
+origin server.
+
+2. 
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.ancestors * { 
+    display: block;
+    border: 2px solid lightgrey;
+    padding: 5px;
+    margin: 15px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function()
+{
+$("#one").hover(function(){
+    alert("grandparent=body, parent=div(ancestors), sibling=div(two), child=ul, grandchildren=li, great-grandchildren=span");
+});
+$("#ul").hover(function(){
+    alert("great-grandparent=body, grandparent=div(ancestors) parent=div(one), child=li, grandchildren=span");
+});
+$("#li").hover(function(){
+    alert("great-grandparent=div(ancestors), grandparent=div(one), parent=ul, child=span");
+});
+$("#span").hover(function(){
+    alert("great-grandparent=div(one), grandparent=ul, parent=li");
+});
+$("#two").hover(function(){
+    alert("grandparent=body, parent=div(ancestors), sibling=div(one), child=para, grandchildren=button");
+});
+$("#p").hover(function(){
+    alert("great-grandparent=body, grandparent=div(ancestors), parent=div(two), child=button");
+});
+$("#button").hover(function(){
+    alert("great-grandparent=div(ancestors), grandparent=div(two), parent=p");
+});
+});
+</script>
+</head>
+<body>
+
+<div class="ancestors">
+  <div style="width:500px;" id="one">div (great-grandparent)
+    <ul id="ul">ul (grandparent)
+      <li id="li">li (direct parent)
+        <span id="span">span</span>
+      </li>
+    </ul>   
+  </div>
+
+  <div style="width:500px;" id="two">div (grandparent)
+    <p id="p">p (direct parent)
+        <button value="button">button</button>
+      </p> 
+  </div>
+</div>
+</body>
+</html>
+
+----------
+I used jQuery event methods. jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.
+The concept of traversing between elements of a page is well understood in jQuery.
+
+3. LocalSstorage:
+   The localStorage property allows us to access a local Storage object. It acts as a temporary database for the localStorage objects.
+   Data stored in localStorage has no expiration time. 
+   Local storage is per domain. All pages, from one domain, can store and access the same data.
+   
+   Cookies:
+   Cookies were invented to solve the problem "how to remember information about the user". When a web server has sent a web page to a 
+   browser, the connection is shut down, and the server forgets everything about the user. Cookies are data, stored in small text files,
+   on our computer.
+   When a user visits a web page, his name can be stored in a cookie.
+   Next time the user visits the page, the cookie "remembers" his name.
+   Cookies are saved in name-value pairs like:
+   "username=John".
+   
+   Similarities:
+   1)In both localStorage and cookies, the values are stored as strings and as key-value pairs.
+   2)Similar to cookies, localStorage can be used to store users' prefernces, save data from flash games etc, basically, both are used to
+   store information.
+   
+   Differences:
+   1)Unlike cookies, localStorage can store data locally within the user's browser.
+   2)Cookies have an expiry time, unlike, localStorage. The data stored in localStorage remains in the browser, unless, the user deletes a
+   key explicitly.
+   3) Local storage data is not sent to the server on every request (HTTP header) as it is purely at the client side. All data is 
+   transferred to and from server, so bandwidth is consumed on every request.
+   4)Compared to localStorage, cookies are a bit difficult to work with javascript for the following reason:
+     Each domain stores all its cookies in a single string, which can make parsing data difficult. 
+     Using local storage, we don't have to parse a string to get data. Instead we can just make a call for the variable name and it's 
+     value is returned. The same applies with creating and deleting data as well.
+   5)For saving client-side data I believe, local storage is better. However, if our server needs information from a client, cookies will 
+   be a better solution. But if we just want to save user-prefs, num vists, or other stuff like that, I believe, local storage is better.
+   6)Unlike cookies, the storage limit is far larger (at least 5MB) in localStorage.
+
+4. http://jsfiddle.net/chandy_02/jwfazego/1/
+
+5. showed the screenshots of both the server and the browser version of console before.
